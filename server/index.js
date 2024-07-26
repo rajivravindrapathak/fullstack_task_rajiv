@@ -10,7 +10,8 @@ const app = express();
 const server = http.createServer(app);
 const io = socketIo(server, {
     cors: {
-        origin: "http://localhost:3000", // Frontend URL
+        // origin: "http://localhost:3000", // Frontend URL
+        origin: "https://harmonious-begonia-acfecd.netlify.app/",
         methods: ["GET", "POST"]
     }
 });
