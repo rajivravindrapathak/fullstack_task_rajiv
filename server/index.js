@@ -10,8 +10,8 @@ const app = express();
 const server = http.createServer(app);
 const io = socketIo(server, {
     cors: {
-        // origin: "http://localhost:3000", // Frontend URL
-        origin: "https://harmonious-begonia-acfecd.netlify.app/",
+        origin: "http://localhost:3000", // Frontend URL
+        // origin: "https://harmonious-begonia-acfecd.netlify.app/",
         methods: ["GET", "POST"]
     }
 });
@@ -19,7 +19,7 @@ const io = socketIo(server, {
 const redis = new Redis({
     port: 12675,
     host: 'redis-12675.c212.ap-south-1-1.ec2.cloud.redislabs.com',
-    username: '',
+    username: 'default',
     password: 'dssYpBnYQrl01GbCGVhVq2e4dYvUrKJB'
 });
 
