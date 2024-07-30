@@ -1,16 +1,17 @@
-$primary-color: #3498db;
+$primary-color: #773102da;
 $secondary-color: #2ecc71;
 
 .App {
     text-align: center;
-    header {
-        background: $primary-color;
-        padding: 20px;
-        color: white;
-        h1 {
-            margin: 0;
-        }
-    }
+    // header {
+    //     background: $primary-color;
+    //     padding: 20px;
+    //     color: white;
+    //     width: 20%;
+    //     h1 {
+    //         margin: 0;
+    //     }
+    // }
     main {
         margin: 20px;
         input {
@@ -21,12 +22,12 @@ $secondary-color: #2ecc71;
         button {
             padding: 10px 20px;
             font-size: 16px;
-            background: $secondary-color;
+            background: $primary-color;
             color: white;
             border: none;
             cursor: pointer;
             &:hover {
-                background: darken($secondary-color, 10%);
+                background: darken($primary-color, 10%);
             }
         }
         ul {
@@ -40,4 +41,19 @@ $secondary-color: #2ecc71;
             }
         }
     }
+}
+
+
+.Homepage {
+    width: 40%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    // border: 1px solid black;
+    // box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    // box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    padding: 5%;
+    margin: 25%;
+    margin-top: 2%;
 }
