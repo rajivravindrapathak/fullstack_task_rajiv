@@ -5,6 +5,7 @@ const Redis = require('ioredis');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const { connection } = require('./config/db');
+const cors = require('cors')
 
 const app = express();
 const server = http.createServer(app);
@@ -12,10 +13,15 @@ const io = socketIo(server, {
     cors: {
         // origin: "http://localhost:3000", // Frontend URL
         // origin: "https://harmonious-begonia-acfecd.netlify.app/",
-        origin: 'https://66a7792b7d1bb4245fdc53f3--jade-yeot-c4eead.netlify.app/',
+        // origin: 'https://66a7792b7d1bb4245fdc53f3--jade-yeot-c4eead.netlify.app/',
+        origin: '*',
         methods: ["GET", "POST"]
     }
 });
+
+app.use(cors({
+    origin: "*"
+}))
 
 const redis = new Redis({
     port: 12675,
